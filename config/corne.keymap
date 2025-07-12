@@ -105,13 +105,13 @@
         };
 
         hash {
-            bindings = <&kp LS(BACKSLASH)>;
+            bindings = <&kp BACKSLASH>;
             key-positions = <5 6>;
             timeout-ms = <25>;
         };
 
         pipe {
-            bindings = <&kp LS(NON_US_HASH)>;
+            bindings = <&kp LS(RA(NON_US_HASH))>;
             key-positions = <17 18>;
             timeout-ms = <25>;
         };
@@ -165,8 +165,8 @@
         };
 
         tilde {
-            bindings = <&kp LS(GRAVE)>;
-            key-positions = <21 22>;
+            bindings = <&kp LS(NON_US_BSLH)>;
+            key-positions = <29 30>;
             timeout-ms = <25>;
         };
 
