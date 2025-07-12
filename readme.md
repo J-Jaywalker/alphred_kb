@@ -10,7 +10,7 @@ The firmware is built using [ZMK](https://zmk.dev/), a modern firmware platform 
 
 > **Why "Alphred"?**  
 > This V2 build features red-colored PCBs, giving rise to the portmanteau *Alph + red* → *Alphred*. Could’ve been *Ralph* for "Red Alph", honestly. Either is good tbh.
-
+![Alphred Keyboard](images/alphred.jpg)
 ---
 
 ## 🗂️ Repository Structure
