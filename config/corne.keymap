@@ -51,6 +51,34 @@
         };
     };
 
+    // These are some janky workarounds to produce UK keycodes. 
+    // I wanted to be able to reference a useful keycode name instead of sending off some random keycode
+    // and hoping I remember what is was 6 months later
+    macros {
+        hash_uk: hash_uk {
+            compatible = "zmk,behavior-macro";
+            label = "UK_HASH";
+            bindings = <&kp LS(BACKSLASH)>;
+        };
+
+        pipe_uk: pipe_uk {
+            compatible = "zmk,behavior-macro";
+            label = "UK_PIPE";
+            bindings = <&kp LS(NON_US_HASH)>;
+        };
+
+        tilde_uk: tilde_uk {
+            compatible = "zmk,behavior-macro";
+            label = "UK_TILDE";
+            bindings = <&kp LS(GRAVE)>;
+        };
+
+        pound_uk: pound_uk {
+        compatible = "zmk,behavior-macro";
+        label = "UK_POUND";
+        bindings = <&kp LS(N3)>;
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -103,13 +131,13 @@
         };
 
         hash {
-            bindings = <&kp HASH>;
+            bindings = <&hash_uk>;
             key-positions = <5 6>;
             timeout-ms = <25>;
         };
 
         pipe {
-            bindings = <&kp PIPE>;
+            bindings = <&pipe_uk>;
             key-positions = <17 18>;
             timeout-ms = <25>;
         };
@@ -163,8 +191,14 @@
         };
 
         tilde{
-            bindings = <&kp TILDE>; 
+            bindings = <&tilde_uk>; 
             key-positions = <21 22>;
+            timeout-ms = <25>;
+        };
+
+        uk_pound{
+            bindings = <&pound_uk>; 
+            key-positions = <4 5>;
             timeout-ms = <25>;
         };
 
