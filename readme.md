@@ -8,6 +8,9 @@ Firmware for the **Alphred**, a custom-built Corne (CRKBD) 6-column, 42-key spli
 
 The firmware is built using [ZMK](https://zmk.dev/), a modern firmware platform for wireless mechanical keyboards. For further details on syntax and configuration behavior, refer to the [ZMK documentation](https://zmk.dev/docs).
 
+> **Why "Alphred"?**  
+> This V2 build features red-colored PCBs, giving rise to the portmanteau *Alph + red* → *Alphred*. Could’ve been *Ralph* for "Red Alph", honestly. Either is good tbh.
+
 ---
 
 ## 🗂️ Repository Structure
