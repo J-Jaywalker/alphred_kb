@@ -7,13 +7,12 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/ext_power.h>
 
-#define ALPH 0 
+#define ALPH 0
 #define ARROWS 1
 #define BLUETOOTH 2
 #define GAME 3
+
 / {
     behaviors {
         hm: homerow_mods {
@@ -33,6 +32,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp UNDERSCORE>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -40,6 +40,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DEL>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -47,6 +48,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp GRAVE>;
+
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
         };
     };
@@ -103,13 +105,13 @@
         };
 
         hash {
-            bindings = <&kp HASH>;
+            bindings = <&kp LS(BACKSLASH)>;
             key-positions = <5 6>;
             timeout-ms = <25>;
         };
 
         pipe {
-            bindings = <&kp PIPE>;
+            bindings = <&kp LS(NON_US_HASH)>;
             key-positions = <17 18>;
             timeout-ms = <25>;
         };
@@ -144,85 +146,86 @@
             timeout-ms = <25>;
         };
 
-        amp{
-            bindings = <&kp AMPS>; 
+        amp {
+            bindings = <&kp AMPS>;
             key-positions = <22 23>;
             timeout-ms = <25>;
         };
 
-        caret{
-            bindings = <&kp CARET>; 
+        caret {
+            bindings = <&kp CARET>;
             key-positions = <6 7>;
             timeout-ms = <25>;
         };
 
-        caps{
-            bindings = <&kp CAPS>; 
+        caps {
+            bindings = <&kp CAPS>;
             key-positions = <16 19>;
             timeout-ms = <25>;
         };
 
-        tilde{
-            bindings = <&kp TILDE>; 
+        tilde {
+            bindings = <&kp LS(GRAVE)>;
             key-positions = <21 22>;
             timeout-ms = <25>;
         };
 
+        uk_pound {
+            bindings = <&kp LS(N3)>;
+            key-positions = <4 5>;
+            timeout-ms = <25>;
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
+
         CHAR {
             display-name = "ALPH";
             bindings = <
-&gresc      &kp Q             &kp W            &kp E        &kp R             &kp T        &kp Y      &kp U             &kp I          &kp O            &kp P               &bckdl
-&kp TAB     &hm LEFT_GUI A    &hm LEFT_ALT S   &hm LCTRL D  &hm LEFT_SHIFT F  &kp G        &kp H      &hm RSHIFT J      &hm RCTRL K    &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &kp SQT
-&kp LSHIFT  &kp Z             &kp X            &kp C        &kp V             &kp B        &kp N      &kp M             &kp COMMA      &kp DOT          &kp FSLH            &kp ENTER
-                                               &kp LALT     &kp LCTRL         &kp LGUI                &spund            &mo ARROWS     &mo BLUETOOTH
+&gresc      &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y   &kp U         &kp I          &kp O            &kp P               &bckdl
+&kp TAB     &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D  &hm LEFT_SHIFT F  &kp G       &kp H   &hm RSHIFT J  &hm RCTRL K    &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &kp SQT
+&kp LSHIFT  &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N   &kp M         &kp COMMA      &kp DOT          &kp FSLH            &kp ENTER
+                                            &kp LALT     &kp LCTRL         &kp LGUI    &spund  &mo ARROWS    &mo BLUETOOTH
             >;
         };
 
         ARR {
             display-name = "ARRW";
             bindings = <
-&bckdl      &none  &kp N7  &kp N8    &kp N9    &kp PERCENT         &kp F12  &none     &kp UP     &none      &kp F5    &bckdl
-&kp TAB     &none  &kp N4  &kp N5    &kp N6    &kp AMPS            &none    &kp LEFT  &kp DOWN   &kp RIGHT  &kp SEMI  &kp SQT
-&kp LSHIFT  &none  &kp N1  &kp N2    &kp N3    &kp STAR            &none    &none     &kp COMMA  &kp DOT    &kp FSLH  &kp ENTER
-                       &kp LALT  &kp N0    &spund              &spund   &none     &kp LGUI
+&bckdl      &none  &kp N7  &kp N8    &kp N9  &kp PERCENT    &kp F12  &none     &kp UP     &none      &kp F5    &bckdl
+&kp TAB     &none  &kp N4  &kp N5    &kp N6  &kp AMPS       &none    &kp LEFT  &kp DOWN   &kp RIGHT  &kp SEMI  &kp SQT
+&kp LSHIFT  &none  &kp N1  &kp N2    &kp N3  &kp STAR       &none    &none     &kp COMMA  &kp DOT    &kp FSLH  &kp ENTER
+                           &kp LALT  &kp N0  &spund         &spund   &none     &kp LGUI
             >;
         };
 
         BT {
             display-name = "BLUT";
             bindings = <
-&none  &none  &none  &none       &none  &none          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &bt BT_CLR
-&none  &none  &none  &none       &none  &none          &none         &none         &none         &none         &none  &none
-&none  &none  &none  &none       &none  &none          &none         &none         &none         &none         &none  &none
-                     &none       &none  &none          &none         &none         &none
+&none  &none  &none  &none  &none  &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &bt BT_CLR
+&none  &none  &none  &none  &none  &none    &none         &none         &none         &none         &none  &none
+&none  &none  &none  &none  &none  &none    &none         &none         &none         &none         &none  &none
+                     &none  &none  &none    &none         &none         &none
             >;
         };
 
         GAME {
             display-name = "GAME";
             bindings = <
-&kp ESC     &kp Q  &kp W   &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I      &kp O    &kp P          &kp BSPC
-&kp TAB  &kp A  &kp S   &kp D  &kp F  &kp G  &kp H  &kp J  &kp K      &kp L    &kp SEMICOLON  &kp SQT
-&kp LSHIFT    &kp Z  &kp X   &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp ENTER
-            &kp LCTL       &kp SPACE     &kp TAB       &kp LALT         &mo ARROWS     &kp LGUI
+&kp ESC     &kp Q  &kp W  &kp E     &kp R      &kp T      &kp Y     &kp U       &kp I      &kp O    &kp P          &kp BSPC
+&kp TAB     &kp A  &kp S  &kp D     &kp F      &kp G      &kp H     &kp J       &kp K      &kp L    &kp SEMICOLON  &kp SQT
+&kp LSHIFT  &kp Z  &kp X  &kp C     &kp V      &kp B      &kp N     &kp M       &kp COMMA  &kp DOT  &kp FSLH       &kp ENTER
+                          &kp LCTL  &kp SPACE  &kp TAB    &kp LALT  &mo ARROWS  &kp LGUI
             >;
         };
-        extra1 { 
-            status = "reserved";
-        };
-        extra2 {
-            status = "reserved";
-        };
-        extra3 {
-            status = "reserved";
-        };
-        extra4 {
-            status = "reserved";
-        };
 
+        extra1 { status = "reserved"; };
+
+        extra2 { status = "reserved"; };
+
+        extra3 { status = "reserved"; };
+
+        extra4 { status = "reserved"; };
     };
 };
