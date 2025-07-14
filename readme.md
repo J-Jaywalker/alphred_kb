@@ -1,10 +1,6 @@
 # Alphred Firmware
 
-Firmware for the **Alphred**, a custom-built Corne (CRKBD) 6-column, 42-key split keyboard. This is the second iteration of the original *Alph* firmware, which powered the first version of the build. Alphred V2 aims to improve upon the original in terms of:
-
-- 🧠 **Functionality**
-- 🔧 **Maintainability**
-- 🎯 **User experience**
+Firmware for the **Alphred**, a custom-built Corne (CRKBD) 6-column, 42-key split keyboard. This is the second iteration of the original *Alph* firmware, which powered the first version of the build. Alphred V2 aims to improve upon the original in terms of functionality, maintainability and user experience.
 
 The firmware is built using [ZMK](https://zmk.dev/), a modern firmware platform for wireless mechanical keyboards. For further details on syntax and configuration behavior, refer to the [ZMK documentation](https://zmk.dev/docs).
 
@@ -17,6 +13,10 @@ The firmware is built using [ZMK](https://zmk.dev/), a modern firmware platform 
 
 ### `config/corne.keymap`
 Defines the keyboard layout, key bindings, behaviors (e.g. hold-tap, layers, macros), and other input logic for the Corne build.
+
+#### Configuring Keymaps
+
+Keymaps can be configured manually by modifying `corne.keymap`, but in most cases it's easier to use the [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/) made by Nick Coutsos, providing it has permissions to run on your repo. 
 
 ### `config/corne.conf`
 ZMK configuration file that controls lower-level keyboard behavior such as debounce timing, power management, and feature toggles.
