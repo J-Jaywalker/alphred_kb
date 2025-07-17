@@ -5,9 +5,12 @@ manifest:
     # dongle_display
     - name: englmaxi
       url-base: https://github.com/englmaxi
-    # nice_oled - nice_epaper - dongle_display!view - oled Adapter
+    # dongle_display!view - oled Adapter
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
+    # nice!beetle display view
+    - name: J-Jaywalker
+      url-base: https://github.com/J-Jaywalker
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -17,9 +20,9 @@ manifest:
     - name: zmk-dongle-display
       remote: englmaxi
       revision: main
-    # nice_oled - nice_epaper
-    - name: zmk-nice-oled
-      remote: mctechnology17
+    # nice beetle
+    - name: zmk-nice-beetle
+      remote: J-Jaywalker
       revision: main
     # dongle_display!view
     - name: zmk-dongle-display-view
