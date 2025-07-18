@@ -8,10 +8,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define ALPH 0
-#define ARROWS 1
-#define BLUETOOTH 2
-#define GAME 3
+#define CHARWIN 0
+#define CHARMAC 1
+#define ARROWS 2
+#define BLUETOOTH 3
+#define GAME 4
 
 / {
     behaviors {
@@ -73,7 +74,7 @@
         };
 
         back_to_work {
-            bindings = <&to ALPH>;
+            bindings = <&to CHARWIN>;
             key-positions = <2 9 4 20>;
             timeout-ms = <25>;
         };
@@ -190,8 +191,18 @@
     keymap {
         compatible = "zmk,keymap";
 
-        CHAR {
-            display-name = "ALPH";
+        CHARWIN {
+            display-name = "ALPH-WIN";
+            bindings = <
+&gresc      &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y   &kp U         &kp I          &kp O            &kp P               &bckdl
+&kp TAB     &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D  &hm LEFT_SHIFT F  &kp G       &kp H   &hm RSHIFT J  &hm RCTRL K    &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &sq_dbq
+&kp LSHIFT  &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N   &kp M         &kp COMMA      &kp DOT          &kp FSLH            &kp ENTER
+                                            &kp LALT     &kp LGUI          &kp LCTRL   &spund  &mo ARROWS    &mo BLUETOOTH
+            >;
+        };
+
+        CHARMAC {
+            display-name = "ALPH-MAC";
             bindings = <
 &gresc      &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y   &kp U         &kp I          &kp O            &kp P               &bckdl
 &kp TAB     &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D  &hm LEFT_SHIFT F  &kp G       &kp H   &hm RSHIFT J  &hm RCTRL K    &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &sq_dbq
@@ -213,7 +224,7 @@
         BT {
             display-name = "BLUT";
             bindings = <
-&none  &none  &none  &none  &none  &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &bt BT_CLR
+&none  &to CHARMAC   &to CHARWIN  &none  &none  &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &bt BT_CLR
 &none  &none  &none  &none  &none  &none    &none         &none         &none         &none         &none  &none
 &none  &none  &none  &none  &none  &none    &none         &none         &none         &none         &none  &none
                      &none  &none  &none    &none         &none         &none
