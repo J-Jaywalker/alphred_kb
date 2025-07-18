@@ -8,10 +8,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define ALPH 0
-#define ARROWS 1
-#define BLUETOOTH 2
-#define GAME 3
+#define CHARWIN 0
+#define CHARMAC 1
+#define ARROWS 2
+#define BLUETOOTH 3
+#define GAME 4
 
 / {
     behaviors {
