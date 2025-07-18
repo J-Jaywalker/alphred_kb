@@ -74,7 +74,7 @@
         };
 
         back_to_work {
-            bindings = <&to ALPH>;
+            bindings = <&to CHARWIN>;
             key-positions = <2 9 4 20>;
             timeout-ms = <25>;
         };
