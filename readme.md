@@ -37,6 +37,16 @@ GitHub Actions workflow that automatically compiles build artifacts on push or P
 
 ---
 
+## 🪲 Configuring Beedly
+
+On the right hand side peripheral, you can see the Beedly the beetle Tamagotchi.
+You can configure dithering for the animation by setting:
+`CONFIG_NICE_BEETLE_DITHER_BEEDLY=y` to `conf/corne.conf`
+
+Check out my forked [zmk-nice-beetle](https://github.com/J-Jaywalker/zmk-nice-beetle) repo for more info.
+
+---
+
 ## 🧪 Building Locally
 
 To build the firmware locally (make sure you have the relevant compilers first):
