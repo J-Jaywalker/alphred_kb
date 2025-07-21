@@ -23,7 +23,7 @@ manifest:
     # nice beetle
     - name: zmk-nice-beetle
       remote: J-Jaywalker
-      revision: main
+      revision: add_python_workflow
     # dongle_display!view
     - name: zmk-dongle-display-view
       remote: mctechnology17
