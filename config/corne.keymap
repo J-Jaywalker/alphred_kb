@@ -37,8 +37,8 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-
         // In all honesty, this is done to circumvent UK locale and is silly
+
         sq_dbq: single_quote_double_quote {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -119,12 +119,14 @@
             bindings = <&kp BACKSLASH>;
             key-positions = <5 6>;
             timeout-ms = <25>;
+            layers = <0>;
         };
 
         pipe {
             bindings = <&kp LS(RA(NON_US_HASH))>;
             key-positions = <17 18>;
             timeout-ms = <25>;
+            layers = <0>;
         };
 
         excl {
@@ -179,12 +181,31 @@
             bindings = <&kp LS(NON_US_HASH)>;
             key-positions = <21 22>;
             timeout-ms = <25>;
+            layers = <0>;
         };
 
         uk_pound {
             bindings = <&kp LS(N3)>;
             key-positions = <4 5>;
             timeout-ms = <25>;
+        };
+
+        mac-hash {
+            bindings = <&kp F21>;
+            key-positions = <5 6>;
+            layers = <1>;
+        };
+
+        mac-pipe {
+            bindings = <&kp F22>;
+            key-positions = <17 18>;
+            layers = <1>;
+        };
+
+        mac-tilde {
+            bindings = <&kp F23>;
+            key-positions = <22 21>;
+            layers = <1>;
         };
     };
 
@@ -194,10 +215,10 @@
         CHARWIN {
             display-name = "ALPH-WIN";
             bindings = <
-&gresc      &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y   &kp U         &kp I          &kp O            &kp P               &bckdl
-&kp TAB     &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D  &hm LEFT_SHIFT F  &kp G       &kp H   &hm RSHIFT J  &hm RCTRL K    &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &sq_dbq
-&kp LSHIFT  &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N   &kp M         &kp COMMA      &kp DOT          &kp FSLH            &kp ENTER
-                                            &kp LALT     &kp LGUI          &kp LCTRL   &spund  &mo ARROWS    &mo BLUETOOTH
+&gresc      &kp Q           &kp W           &kp E        &kp R             &kp T        &kp Y   &kp U         &kp I          &kp O            &kp P               &bckdl
+&kp TAB     &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D  &hm LEFT_SHIFT F  &kp G        &kp H   &hm RSHIFT J  &hm RCTRL K    &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &sq_dbq
+&kp LSHIFT  &kp Z           &kp X           &kp C        &kp V             &kp B        &kp N   &kp M         &kp COMMA      &kp DOT          &kp FSLH            &kp ENTER
+                                            &kp LALT     &kp LGUI          &kp LCTRL    &spund  &mo ARROWS    &mo BLUETOOTH
             >;
         };
 
@@ -224,10 +245,10 @@
         BT {
             display-name = "BLUT";
             bindings = <
-&none  &to CHARMAC   &to CHARWIN  &none  &none  &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &bt BT_CLR
-&none  &none  &none  &none  &none  &none    &none         &none         &none         &none         &none  &none
-&none  &none  &none  &none  &none  &none    &none         &none         &none         &none         &none  &none
-                     &none  &none  &none    &none         &none         &none
+&none  &to CHARMAC  &to CHARWIN  &none  &none  &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &bt BT_CLR
+&none  &none        &none        &none  &none  &none    &none         &none         &none         &none         &none  &none
+&none  &none        &none        &none  &none  &none    &none         &none         &none         &none         &none  &none
+                                 &none  &none  &none    &none         &none         &none
             >;
         };
 
