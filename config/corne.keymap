@@ -193,7 +193,7 @@
         game_esc {
             bindings = <&kp ESC>;
             key-positions = <38 39>;
-            layers = <GAME>;
+            layers = <4>;
         };
     };
 
