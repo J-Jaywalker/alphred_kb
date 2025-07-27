@@ -67,18 +67,6 @@
     combos {
         compatible = "zmk,combos";
 
-        game_mode {
-            bindings = <&to GAME>;
-            key-positions = <17 13 31 3>;
-            timeout-ms = <25>;
-        };
-
-        back_to_work {
-            bindings = <&to CHARWIN>;
-            key-positions = <2 9 4 20>;
-            timeout-ms = <25>;
-        };
-
         left_bkt {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <4 3>;
@@ -207,6 +195,12 @@
             key-positions = <22 21>;
             layers = <1>;
         };
+
+        game_esc {
+            bindings = <&kp ESC>;
+            key-positions = <38 39>;
+            layers = <4>;
+        };
     };
 
     keymap {
@@ -246,7 +240,7 @@
             display-name = "BLUT";
             bindings = <
 &none  &to CHARMAC  &to CHARWIN  &none  &none  &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &bt BT_CLR
-&none  &none        &none        &none  &none  &none    &none         &none         &none         &none         &none  &none
+&none  &none        &none        &none  &none  &to 4    &none         &none         &none         &none         &none  &none
 &none  &none        &none        &none  &none  &none    &none         &none         &none         &none         &none  &none
                                  &none  &none  &none    &none         &none         &none
             >;
@@ -255,10 +249,10 @@
         GAME {
             display-name = "GAME";
             bindings = <
-&kp ESC     &kp Q  &kp W  &kp E     &kp R      &kp T      &kp Y     &kp U       &kp I      &kp O    &kp P          &kp BSPC
-&kp TAB     &kp A  &kp S  &kp D     &kp F      &kp G      &kp H     &kp J       &kp K      &kp L    &kp SEMICOLON  &kp SQT
-&kp LSHIFT  &kp Z  &kp X  &kp C     &kp V      &kp B      &kp N     &kp M       &kp COMMA  &kp DOT  &kp FSLH       &kp ENTER
-                          &kp LCTL  &kp SPACE  &kp TAB    &kp LALT  &mo ARROWS  &kp LGUI
+&kp ESC     &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y   &kp U       &kp I      &kp O    &kp P          &bckdl
+&kp TAB     &kp A  &kp S  &kp D     &kp F      &kp G        &kp H   &kp J       &kp K      &kp L    &kp SEMICOLON  &kp SQT
+&kp LSHIFT  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N   &kp M       &kp COMMA  &kp DOT  &kp FSLH       &kp ENTER
+                          &kp LALT  &kp LCTRL  &kp SPACE    &spund  &mo ARROWS  &mo 3
             >;
         };
 
