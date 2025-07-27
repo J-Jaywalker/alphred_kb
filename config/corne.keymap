@@ -206,7 +206,7 @@
 &gresc      &kp Q           &kp W           &kp E        &kp R             &kp T        &kp Y   &kp U         &kp I          &kp O            &kp P               &bckdl
 &kp TAB     &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D  &hm LEFT_SHIFT F  &kp G        &kp H   &hm RSHIFT J  &hm RCTRL K    &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &sq_dbq
 &kp LSHIFT  &kp Z           &kp X           &kp C        &kp V             &kp B        &kp N   &kp M         &kp COMMA      &kp DOT          &kp FSLH            &kp ENTER
-                                            &kp LALT     &kp LGUI          &kp LCTRL    &spund  &mo ARROWS    &mo BLUETOOTH
+                                            &kp LALT     &kp LGUI          &kp LCTRL    &spund  &mo 2         &mo 3
             >;
         };
 
@@ -216,7 +216,7 @@
 &gresc      &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y   &kp U         &kp I          &kp O            &kp P               &bckdl
 &kp TAB     &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D  &hm LEFT_SHIFT F  &kp G       &kp H   &hm RSHIFT J  &hm RCTRL K    &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &sq_dbq
 &kp LSHIFT  &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N   &kp M         &kp COMMA      &kp DOT          &kp FSLH            &kp ENTER
-                                            &kp LALT     &kp LCTRL         &kp LGUI    &spund  &mo ARROWS    &mo BLUETOOTH
+                                            &kp LALT     &kp LCTRL         &kp LGUI    &spund  &mo 2         &mo 3
             >;
         };
 
@@ -233,8 +233,8 @@
         BLUETOOTH {
             display-name = "BLUT";
             bindings = <
-&none  &to CHARMAC  &to CHARWIN  &none  &none  &none      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &bt BT_CLR
-&none  &none        &none        &none  &none  &to GAME   &none         &none         &none         &none         &none  &none
+&none  &to 1        &to 0        &none  &none  &none      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &bt BT_CLR
+&none  &none        &none        &none  &none  &to 4      &none         &none         &none         &none         &none  &none
 &none  &none        &none        &none  &none  &none      &none         &none         &none         &none         &none  &none
                                  &none  &none  &none      &none         &none         &none
             >;
@@ -246,7 +246,7 @@
 &kp ESC     &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y   &kp U       &kp I      &kp O    &kp P          &bckdl
 &kp TAB     &kp A  &kp S  &kp D     &kp F      &kp G        &kp H   &kp J       &kp K      &kp L    &kp SEMICOLON  &kp SQT
 &kp LSHIFT  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N   &kp M       &kp COMMA  &kp DOT  &kp FSLH       &kp ENTER
-                          &kp LALT  &kp LCTRL  &kp SPACE    &spund  &mo ARROWS  &mo BLUETOOTH
+                          &kp LALT  &kp LCTRL  &kp SPACE    &spund  &mo 2       &mo 3
             >;
         };
 
