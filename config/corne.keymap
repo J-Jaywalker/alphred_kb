@@ -148,12 +148,6 @@
             timeout-ms = <25>;
         };
 
-        amp {
-            bindings = <&kp AMPS>;
-            key-positions = <22 23>;
-            timeout-ms = <25>;
-        };
-
         caret {
             bindings = <&kp CARET>;
             key-positions = <6 7>;
