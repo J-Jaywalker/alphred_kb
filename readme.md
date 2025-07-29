@@ -1,6 +1,6 @@
 # Alphred Firmware
 
-Firmware for the **Alphred**, a custom-built Corne (CRKBD) 6-column, 42-key split keyboard. This is the second iteration of the original *Alph* firmware, which powered the first version of the build. Alphred V2 aims to improve upon the original in terms of functionality, maintainability and user experience.
+Firmware for the **Alphred**, a custom-built CRKBD 6-column, 42-key split keyboard. This is the second iteration of the original *Alph* firmware, which powered the first version of the build. Alphred V2 aims to improve upon the original in terms of functionality, maintainability and user experience.
 
 The firmware is built using [ZMK](https://zmk.dev/), a modern firmware platform for wireless mechanical keyboards. For further details on syntax and configuration behavior, refer to the [ZMK documentation](https://zmk.dev/docs).
 
