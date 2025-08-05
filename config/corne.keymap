@@ -134,7 +134,7 @@
         };
 
         mac-pipe {
-            bindings = <&kp LS(NON_US_BACKSLASH)>;
+            bindings = <&kp LA(GRAVE)>;
             key-positions = <17 18>;
             layers = <CHARMAC>;
         };
@@ -142,7 +142,7 @@
         mac-tilde {
             bindings = <&kp LS(GRAVE)>;
             key-positions = <22 21>;
-        layers = <CHARMAC>;
+            layers = <CHARMAC>;
 };
 
         excl {
