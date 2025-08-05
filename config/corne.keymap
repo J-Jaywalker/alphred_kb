@@ -134,7 +134,7 @@
         };
 
         mac-pipe {
-            bindings = <&kp LA(GRAVE)>;
+            bindings = <&kp LS(BACKSLASH)>;
             key-positions = <17 18>;
             layers = <CHARMAC>;
         };
