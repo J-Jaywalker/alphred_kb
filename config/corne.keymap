@@ -104,19 +104,46 @@
             timeout-ms = <25>;
         };
 
-        hash {
+        // Windows bindings for some key programming keymaps, GB locale
+        win-hash {
             bindings = <&kp BACKSLASH>;
             key-positions = <5 6>;
             timeout-ms = <25>;
             layers = <CHARWIN>;
         };
 
-        pipe {
+        win-pipe {
             bindings = <&kp LS(RA(NON_US_HASH))>;
             key-positions = <17 18>;
             timeout-ms = <25>;
             layers = <CHARWIN>;
         };
+
+        win-tilde {
+            bindings = <&kp LS(NON_US_HASH)>;
+            key-positions = <21 22>;
+            timeout-ms = <25>;
+            layers = <CHARWIN>;
+        };
+
+        // Mac bindings for some key programming keymaps, GB locale
+        mac-hash {
+            bindings = <&kp LA(N3)>;
+            key-positions = <5 6>;
+            layers = <CHARMAC>;
+        };
+
+        mac-pipe {
+            bindings = <&kp LS(BACKSLASH)>;
+            key-positions = <17 18>;
+            layers = <CHARMAC>;
+        };
+
+        mac-tilde {
+            bindings = <&kp LS(GRAVE)>;
+            key-positions = <22 21>;
+            layers = <CHARMAC>;
+};
 
         excl {
             bindings = <&kp EXCL>;
@@ -160,35 +187,10 @@
             timeout-ms = <25>;
         };
 
-        tilde {
-            bindings = <&kp LS(NON_US_HASH)>;
-            key-positions = <21 22>;
-            timeout-ms = <25>;
-            layers = <CHARWIN>;
-        };
-
         uk_pound {
             bindings = <&kp LS(N3)>;
             key-positions = <4 5>;
             timeout-ms = <25>;
-        };
-
-        mac-hash {
-            bindings = <&kp F21>;
-            key-positions = <5 6>;
-            layers = <CHARMAC>;
-        };
-
-        mac-pipe {
-            bindings = <&kp F22>;
-            key-positions = <17 18>;
-            layers = <CHARMAC>;
-        };
-
-        mac-tilde {
-            bindings = <&kp F23>;
-            key-positions = <22 21>;
-            layers = <CHARMAC>;
         };
     };
 
