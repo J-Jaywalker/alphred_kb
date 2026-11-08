@@ -24,7 +24,7 @@ ZMK configuration file that controls lower-level keyboard behavior such as debou
 ### `build.yaml`
 Specifies build targets for multiple board and hardware configurations. Examples include:
 
-- **MCUs:** `nice_nano_v2`, `rp2040_pro_micro`
+- **MCUs:** `nice_nano//zmk`, `rp2040_pro_micro`
 - **Displays:** `nice_oled`, `nice_epaper`
 
 Customize these to generate specific firmware builds for each half or hardware variant.
@@ -52,7 +52,7 @@ Check out my forked [zmk-nice-beetle](https://github.com/J-Jaywalker/zmk-nice-be
 To build the firmware locally (make sure you have the relevant compilers first):
 
 ```bash
-west build -s zmk/app -d build/left -b nice_nano_v2 -- -DSHIELD=corne_left -DZMK_CONFIG=config
+west build -s zmk/app -d build/left -b nice_nano//zmk -- -DSHIELD=corne_left -DZMK_CONFIG=config
 ```
 Adjust SHIELD and BOARD as needed for your hardware and layout.
 
