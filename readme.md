@@ -43,6 +43,15 @@ On the right hand side peripheral, you can see the Beedly the beetle Tamagotchi.
 You can configure dithering for the animation by setting:
 `CONFIG_NICE_BEETLE_DITHER_BEEDLY=y` to `conf/corne.conf`
 
+### Looking after Beedly
+
+- **Open the menu:** hold the `BLUETOOTH` layer key and press `P`. This switches to the `BEEDLY` layer.
+- **Navigate:** `UP` / `DOWN` / `ENTER` sit in the same places as the arrow keys and enter on the `ARROWS` layer. Every other key does nothing on this layer, so nothing leaks into typing.
+- **Actions:** `PET`, `FEED` and `SAVE`.
+- **Where:** the menu shows on the left display, over the WPM graph. Beedly himself, with his hearts, food and XP bars, lives on the right half and its display.
+- **Saving:** Beedly's state is saved when you pick `SAVE`, 30 s after an action, when the keyboard goes idle, and before it sleeps.
+- **Exit:** press `W` (`&to CHARWIN`) or `Q` (`&to CHARMAC`), the same keys as on the `BLUETOOTH` layer, to return to typing. Holding the `BLUETOOTH` layer key first also works.
+
 Check out my forked [zmk-nice-beetle](https://github.com/J-Jaywalker/zmk-nice-beetle) repo for more info.
 
 ---
